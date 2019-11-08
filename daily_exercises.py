@@ -88,3 +88,15 @@
 
 # exercise 8
 
+def bubble_sort(names):
+    for x in range(len(names) -1):
+        swaps = 0
+        if names[x] > names[x +1]:
+            temp = names[x + 1]
+            names[x + 1] = names[x]
+            names[x] = temp
+            swaps += 1
+    return names
+
+
+print(bubble_sort([5, 1, 4, 2, 8]))
