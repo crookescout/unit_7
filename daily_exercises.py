@@ -88,6 +88,7 @@ print(replace_four("put the bags in the cars and then do them in the pool"))
 
 # exercise 8
 
+
 def bubble_sort(names):
     for x in range(len(names) -1):
         swaps = 0
