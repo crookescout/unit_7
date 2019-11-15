@@ -4,6 +4,11 @@ alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 
 def shifted():
+    """
+    This function ask the user how many times they want to shift the alphabet and then shifts the alphabet
+    that many times
+    :return: the shifted alphabet
+    """
     shift = int(input("How many times do you want to shift the alphabet?"))
     first = alphabet[0:shift]
     last = alphabet[shift:]
@@ -12,6 +17,12 @@ def shifted():
 
 
 def encode(new_alphabet):
+    """
+    This function gets a word from the user that they want to encode and encodes the word using the alphabet and
+    the shifted alphabet
+    :param new_alphabet: the shifted alphabet
+    :return: none
+    """
     code_word = ""
     word = (input("what word do you want to encode?"))
     word = word.lower()
@@ -26,10 +37,16 @@ def encode(new_alphabet):
 
 
 def decode(new_alphabet):
+    """
+    This function takes a word from the user that they want to decode and decodes the word using the alphabet and
+    the shifted alphabet
+    :param new_alphabet: the shifted alphabet
+    :return: none
+    """
     decoded_word = ""
     user_decode_word = input("what word do you want to decode?")
     user_decode_word = user_decode_word.lower()
-    for x in decoded_word:
+    for x in user_decode_word:
         if x not in new_alphabet:
             decoded_word += x
         else:
