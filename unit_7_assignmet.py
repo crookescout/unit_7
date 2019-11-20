@@ -6,7 +6,9 @@ alphabet = "abcdefghijklmnopqrstuvwxyz"
 def shifted():
     """
     This function ask the user how many times they want to shift the alphabet and then shifts the alphabet
-    that many times
+    that many times.
+    Ex. shift of 3 would give
+    defghijklmnopqrstuvwxyzabc
     :return: the shifted alphabet
     """
     shift = int(input("How many times do you want to shift the alphabet?"))
@@ -30,9 +32,9 @@ def encode(new_alphabet):
         if x not in new_alphabet:
             code_word += x
         else:
-            position = alphabet.index(x)
-            new_position = new_alphabet[position]
-            code_word += new_position
+            position = alphabet.index(x)  # this finds the index of each letter
+            new_position = new_alphabet[position]  # this finds the letter of the index in the new alphabet
+            code_word += new_position  # this adds the new letters from the shifter alphabet to the code word
     print("your encoded word is", code_word)
 
 
@@ -50,9 +52,9 @@ def decode(new_alphabet):
         if x not in new_alphabet:
             decoded_word += x
         else:
-            position = new_alphabet.index(x)
-            new_position = alphabet[position]
-            decoded_word += new_position
+            position = new_alphabet.index(x)  # this finds the index of the letter in the shifted alphabet
+            new_position = alphabet[position]  # this finds the letter of the position in the real alphabet
+            decoded_word += new_position  # this adds the new letter form the original alphabet to the decoded word
     print("your decoded word is", decoded_word)
 
 
